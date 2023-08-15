@@ -5,9 +5,102 @@
   <meta charset="UTF-8">
   <style>
     /* 👉 Task 1- Apply the reset found on this page: https://www.joshwcomeau.com/css/custom-css-reset/ */
+    *, *::before, *::after {
+    box-sizing: border-box;
+  }
 
+  * {
+    margin: 0;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  #root, #__next {
+    isolation: isolate;
+  }
   </style>
+  
+
+  
   <style>
+    body {
+    font-family: Arial
+  }
+
+  #headerTop {
+    color: white
+    padding = 1rem
+    backround-color = black
+    display = inline
+  }
+
+  span {
+    margin: right
+  }
+
+  #sm {
+    font-weight: bold
+    text = uppercase
+  }
+
+  #headerBottom {
+    border-bottom: color = grey
+    padding = 1rem
+    block = inline
+    }
+
+    #comp {
+      color: white
+      font-weight = bold
+      backround = black
+      padding = 1rem
+      border = solid
+      margin = right
+      curser = pointer
+    }
+
+    #headerbottom button.active {
+      color: grey
+      border-bottom = 2px
+      font-weight = bold
+    }
+
+    .email div {
+     display: inline-block
+    }
+
+    .email {
+      padding: 1rem, 1rem, 1rem, 2rem
+      border-bottom = 1px solid light grey
+    }
+
+    .email-name, .email-subject {
+      width: 35%
+    }
+
+    .eamil-check, .eamil-date , .email-size {
+      width: 8%
+    }
+
+    .email:nth-child(2){
+      font-weight: bold
+    }
     /* 👉 Task 2- Target the body element.
     Apply a font family of Arial to the body element.
     The font property is inherited by descendant (nested) elements. */
@@ -78,7 +171,7 @@
     <header>
       <div id="headerTop">
         <div>
-          <span>Super Mail</span>
+          <span id="sm">Super Mail</span>
           <span>Jess</span>
         </div>
         <div>
@@ -86,9 +179,9 @@
         </div>
       </div>
       <div id="headerBottom">
-        <div>Compose</div>
+        <div id="comp">Compose</div>
         <div>
-          <button>All mail</button>
+          <button class="active">All mail</button>
           <button>Unread</button>
           <button>Pinned</button>
           <button>VIPs</button>
